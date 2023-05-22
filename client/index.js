@@ -6,8 +6,10 @@ const prompt=require("prompt-sync")({sigint:true})
 const serverUrl = 'http://localhost:1225';
 
 async function main() {
+  const nameInput = document.getElementById('name');
+  const name = nameInput.value;
 
-  const name = prompt("Which name do you want to check on the list? ");
+  // const name = prompt("Which name do you want to check on the list? ");
 
   // TODO: how do we prove to the server we're on the nice list? 
   const merkleTree = new MerkleTree(niceList)
